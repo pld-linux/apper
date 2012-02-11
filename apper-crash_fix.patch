@@ -1,0 +1,20 @@
+diff -ur apper-0.7.0.orig/Apper/main.cpp apper-0.7.0/Apper/main.cpp
+--- apper-0.7.0.orig/Apper/main.cpp	2012-02-05 13:08:14.521574875 +0100
++++ apper-0.7.0/Apper/main.cpp	2012-02-05 16:24:35.096903422 +0100
+@@ -75,6 +75,8 @@
+     options.add("+[package]", ki18n("Package file to install"));
+     KCmdLineArgs::addCmdLineOptions(options);
+ 
++    Apper app;
++
+     KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+ 
+     if (args->count()) {
+@@ -131,7 +133,5 @@
+         return 0;
+     }
+ 
+-    Apper app;
+-
+     return app.exec();
+ }
